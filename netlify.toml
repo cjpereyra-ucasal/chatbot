@@ -1,2 +1,14 @@
+# --- Netlify build ---
+[build]
+  publish = "."                      # publica desde la raíz del repo
+  functions = "netlify/functions"    # carpeta de funciones
+
+# --- Netlify Functions ---
 [functions]
   node_bundler = "esbuild"
+
+# (Opcional) si vas a embeber desde otros dominios:
+# [[headers]]
+#   for = "/*"
+#   [headers.values]
+#     Access-Control-Allow-Origin = "*"
